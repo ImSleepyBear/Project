@@ -37,7 +37,7 @@ public class FXMLLogin implements Initializable {
     
     @FXML
     private void login(ActionEvent event) {
-        
+        cs.change(event, cs.lobby);
     }
     
     @FXML
@@ -52,7 +52,7 @@ public class FXMLLogin implements Initializable {
     
     @FXML
     private void recoverCredentials(ActionEvent event) {
-        
+        cs.change(event, cs.recover);
     }
     
     @Override

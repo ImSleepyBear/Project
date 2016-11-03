@@ -22,6 +22,9 @@ public class ChangeScene {
     
     public String login = "LogIn";
     public String signup = "SignUp";
+    public String recover = "RecoverCredentials";
+    public String lobby = "Lobby";
+    public String collection = "CardCollection";
     
     public void change(ActionEvent event, String destination) {        
         try {
