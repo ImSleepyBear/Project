@@ -25,6 +25,7 @@ public class ChangeScene {
     public String recover = "RecoverCredentials";
     public String lobby = "Lobby";
     public String collection = "CardCollection";
+    public String options = "Options";
     
     public void change(ActionEvent event, String destination) {        
         try {

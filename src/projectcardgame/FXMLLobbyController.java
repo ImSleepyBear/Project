@@ -26,6 +26,12 @@ public class FXMLLobbyController implements Initializable {
     
     @FXML
     private Button cardCollection;
+    
+    @FXML
+    private Button options;
+    
+    @FXML
+    private Button logout;
 
     private ChangeScene cs = new ChangeScene();
     
@@ -38,5 +44,17 @@ public class FXMLLobbyController implements Initializable {
     @FXML
     public void cardCollection(ActionEvent event){
         cs.change(event, cs.collection);
+    }
+    
+    @FXML
+    public void options(ActionEvent event){
+        cs.change(event, cs.options);
+    }
+    
+    
+    @FXML
+    public void logOut(ActionEvent event){
+        //cs.change(event, cs.collection);
+        System.exit(1);
     }
 }
