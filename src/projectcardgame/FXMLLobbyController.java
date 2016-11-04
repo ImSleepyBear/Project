@@ -25,7 +25,19 @@ import javafx.scene.control.Button;
 public class FXMLLobbyController implements Initializable {
     
     @FXML
+    private Button singlePlayer;
+    
+    @FXML
+    private Button multiPlayer;
+    
+    @FXML
     private Button cardCollection;
+    
+    @FXML
+    private Button instructions;
+    
+    @FXML
+    private Button friends;
     
     @FXML
     private Button options;
@@ -40,10 +52,29 @@ public class FXMLLobbyController implements Initializable {
         // TODO
     }    
     
+    @FXML
+    public void singlePlayer(ActionEvent event){
+        cs.change(event, null);
+    }
+    
+    @FXML
+    public void multiPlayer(ActionEvent event){
+        cs.change(event, null);
+    }
     
     @FXML
     public void cardCollection(ActionEvent event){
         cs.change(event, cs.collection);
+    }
+    
+    @FXML
+    public void instructions(ActionEvent event){
+        cs.change(event, cs.instructions);
+    }
+    
+    @FXML
+    public void friends(ActionEvent event){
+        cs.change(event, null);
     }
     
     @FXML
