@@ -26,6 +26,7 @@ public class ChangeScene {
     public String lobby = "Lobby";
     public String collection = "CardCollection";
     public String options = "Options";
+    public String instructions = "Instructions";
     
     public void change(ActionEvent event, String destination) {        
         try {
