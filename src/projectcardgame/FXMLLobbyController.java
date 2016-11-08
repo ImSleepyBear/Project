@@ -89,7 +89,7 @@ public class FXMLLobbyController implements Initializable {
     
     @FXML
     public void logOut(ActionEvent event){
-        //cs.change(event, cs.collection);
-        System.exit(1);
+        cs.change(event, cs.login);
+        //System.exit(1);
     }
 }
