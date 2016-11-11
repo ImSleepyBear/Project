@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package projectcardgame;
 
 import com.mysql.jdbc.Connection;
@@ -14,6 +10,12 @@ import java.sql.ResultSet;
  *
  * @author mohini
  */
+
+/*
+ * connects to the database, and adds/changes/deletes variables.
+ * 
+ */
+
 public class DatabaseConnector {
     
     String url = null;
