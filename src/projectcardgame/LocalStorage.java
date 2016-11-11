@@ -11,10 +11,11 @@ package projectcardgame;
  */
 
 /*
- * add, start and stop audio files
- * make use of both background audio, and audio effects
+ * save variables in the database on the computer, just to save time and
+ * to avoid talking to much with the database.
+ * the variables are variables that is needed on many places.
  */
 
-public class AudioHandler {
+public class LocalStorage {
     
 }

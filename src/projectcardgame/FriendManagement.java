@@ -9,6 +9,12 @@ package projectcardgame;
  *
  * @author mohini
  */
+
+/*
+ * deals with adding, and deleting friends, as well as chatting.
+ * 
+ */
+
 public class FriendManagement {
     
 }
