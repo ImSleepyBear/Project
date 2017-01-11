@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectcardgame;
+package controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import scenes.ChangeScene;
 
 /**
  *

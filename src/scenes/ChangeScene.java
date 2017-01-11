@@ -1,5 +1,5 @@
 
-package projectcardgame;
+package scenes;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
@@ -32,7 +32,7 @@ public class ChangeScene {
     
     public void change(ActionEvent event, String destination) {        
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("FXML" + destination + ".fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/scenes/FXML" + destination + ".fxml"));
             Scene scene = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(scene);

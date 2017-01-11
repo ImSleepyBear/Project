@@ -19,7 +19,7 @@ public class ProjectCardgame extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLLogin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/scenes/FXMLLogin.fxml"));
         
         Scene scene = new Scene(root);
         
