@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 
 public class ChangeScene {
     
-    public String login = "LogIn";
+    public String login = "Login";
     public String signup = "SignUp";
     public String recover = "RecoverCredentials";
     public String lobby = "Lobby";

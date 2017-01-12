@@ -13,6 +13,9 @@ public abstract class Characters {
     abstract String name();
     abstract String characterClass();
     abstract String characterRarity();
+    abstract boolean characterCharge();
+    abstract int characterLevel();
+    abstract int manaCost();
     abstract int health();
     abstract int power();
     abstract void ability();
