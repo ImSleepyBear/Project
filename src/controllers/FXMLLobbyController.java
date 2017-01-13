@@ -26,26 +26,26 @@ import scenes.ChangeScene;
 
 public class FXMLLobbyController implements Initializable {
     
-    @FXML
-    private Button singlePlayer;
-    
-    @FXML
-    private Button multiPlayer;
-    
-    @FXML
-    private Button cardCollection;
-    
-    @FXML
-    private Button instructions;
-    
-    @FXML
-    private Button friends;
-    
-    @FXML
-    private Button options;
-    
-    @FXML
-    private Button logout;
+//    @FXML
+//    private Button singlePlayer;
+//    
+//    @FXML
+//    private Button multiPlayer;
+//    
+//    @FXML
+//    private Button cardCollection;
+//    
+//    @FXML
+//    private Button instructions;
+//    
+//    @FXML
+//    private Button friends;
+//    
+//    @FXML
+//    private Button options;
+//    
+//    @FXML
+//    private Button logout;
     
     @FXML
     private ListView <String> friendList;

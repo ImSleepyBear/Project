@@ -6,20 +6,19 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLLobbyController">
    <children>
       <SplitPane dividerPositions="0.5476878612716763" layoutX="155.0" layoutY="123.0" prefHeight="381.0" prefWidth="694.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="singlePlayer" layoutX="58.0" layoutY="14.0" mnemonicParsing="false" onAction="#singlePlayer" prefHeight="38.0" prefWidth="261.0" text="Singleplayer" />
-                  <Button fx:id="multiPlayer" layoutX="58.0" layoutY="64.0" mnemonicParsing="false" onAction="#multiPlayer" prefHeight="38.0" prefWidth="261.0" text="Multiplayer" />
-                  <Button fx:id="cardCollection" layoutX="58.0" layoutY="112.0" mnemonicParsing="false" onAction="#cardCollection" prefHeight="38.0" prefWidth="261.0" text="Card collection" />
-                  <Button fx:id="instructions" layoutX="58.0" layoutY="160.0" mnemonicParsing="false" onAction="#instructions" prefHeight="38.0" prefWidth="261.0" text="Instructions" />
-                  <Button fx:id="friends" layoutX="58.0" layoutY="208.0" mnemonicParsing="false" onAction="#friends" prefHeight="38.0" prefWidth="261.0" text="Friends" />
-                  <Button fx:id="options" layoutX="58.0" layoutY="257.0" mnemonicParsing="false" onAction="#options" prefHeight="38.0" prefWidth="261.0" text="Options" />
-                  <Button fx:id="logout" layoutX="58.0" layoutY="306.0" mnemonicParsing="false" onAction="#logOut" prefHeight="38.0" prefWidth="261.0" text="Log out" />
+                  <Button layoutX="58.0" layoutY="14.0" mnemonicParsing="false" onAction="#singlePlayer" prefHeight="38.0" prefWidth="261.0" text="Singleplayer" />
+                  <Button layoutX="58.0" layoutY="64.0" mnemonicParsing="false" onAction="#multiPlayer" prefHeight="38.0" prefWidth="261.0" text="Multiplayer" />
+                  <Button layoutX="58.0" layoutY="112.0" mnemonicParsing="false" onAction="#cardCollection" prefHeight="38.0" prefWidth="261.0" text="Card collection" />
+                  <Button layoutX="58.0" layoutY="160.0" mnemonicParsing="false" onAction="#instructions" prefHeight="38.0" prefWidth="261.0" text="Instructions" />
+                  <Button layoutX="58.0" layoutY="208.0" mnemonicParsing="false" onAction="#friends" prefHeight="38.0" prefWidth="261.0" text="Friends" />
+                  <Button layoutX="58.0" layoutY="257.0" mnemonicParsing="false" onAction="#options" prefHeight="38.0" prefWidth="261.0" text="Options" />
+                  <Button layoutX="58.0" layoutY="306.0" mnemonicParsing="false" onAction="#logOut" prefHeight="38.0" prefWidth="261.0" text="Log out" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="379.0" prefWidth="333.0">
