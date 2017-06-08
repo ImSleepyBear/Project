@@ -39,11 +39,7 @@ public class FXMLCardCollectionController implements Initializable {
     private MenuButton showCards;
 
     @FXML
-    private ListView<String> characterList;// = new ListView<String>();
-
-//    ObservableList<String> items = FXCollections.observableArrayList();
-//    private ListProperty<String> listProperty = new SimpleListProperty<String>();
-//    private List<String> items = new ArrayList<String>();
+    private ListView<String> characterList;
     
     private characters.CharacterInformation characterInfo = new CharacterInformation();
     ChangeScene cs = new ChangeScene();
