@@ -9,7 +9,7 @@ package characters;
  *
  * @author Mohini
  */
-public class ADD extends Characters{
+public class ADD extends CharacterBasics{
     
     private String name = "ADD";
     private String characterClass = null;

@@ -9,7 +9,7 @@ package characters;
  *
  * @author Mohini
  */
-public class ALS_LouGehrigsDisease extends Characters{
+public class ALS_LouGehrigsDisease extends CharacterBasics{
     private String name = "ALS Lou Gehig's disease";
     private String characterClass = null;
     private String characterRarity = null;

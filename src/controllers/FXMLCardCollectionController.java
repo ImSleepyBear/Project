@@ -5,8 +5,15 @@
  */
 package controllers;
 
+import characters.CharacterInformation;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,41 +31,59 @@ public class FXMLCardCollectionController implements Initializable {
 
     @FXML
     private Button displayCards;
-    
+
     @FXML
     private MenuButton sortCards;
-    
+
     @FXML
     private MenuButton showCards;
-    
+
     @FXML
-    private ListView<String> characters = new ListView<String>();
+    private ListView<String> characterList = new ListView<String>();
+
+//    ObservableList<String> items = FXCollections.observableArrayList();
+    private ListProperty<String> listProperty = new SimpleListProperty<String>();
+    private List<String> items = new ArrayList<String>();
     
+    private characters.CharacterInformation characterInfo = new CharacterInformation();
     ChangeScene cs = new ChangeScene();
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
+        for (String listItems : characterInfo.characters) {
+            items.add(listItems);
+            System.out.println(listItems);
+        }
+
+        for (String item : items) {
+            System.out.println("item " + item);
+        }
+//        items.addAll(characterInfo.getCharacters());
+//        characterList.setItems(items);
+//        characterList.itemsProperty().bind(listProperty);
+//        items.set(FXCollections.observableArrayList(items));
+//        listProperty.set(FXCollections.observableArrayList(items));
     }
-    
+
     @FXML
-    public void sortCards(ActionEvent event){
+    public void sortCards(ActionEvent event) {
 //        cs.change(event, cs.lobby);
     }
-    
+
     @FXML
-    public void showCards(ActionEvent event){
+    public void showCards(ActionEvent event) {
 //        cs.change(event, cs.lobby);
     }
-    
+
     @FXML
-    public void displayCards(ActionEvent event){
+    public void displayCards(ActionEvent event) {
 //        cs.change(event, cs.lobby);
     }
-    
+
     @FXML
-    public void back(ActionEvent event){
+    public void back(ActionEvent event) {
         cs.change(event, cs.lobby);
     }
-    
+
 }

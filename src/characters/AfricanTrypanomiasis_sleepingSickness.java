@@ -9,7 +9,7 @@ package characters;
  *
  * @author Mohini
  */
-public class AfricanTrypanomiasis_sleepingSickness extends Characters{
+public class AfricanTrypanomiasis_sleepingSickness extends CharacterBasics{
 
     private String name = "African Trypanomiasis or Sleeping Sickness";
     private String characterClass = null;

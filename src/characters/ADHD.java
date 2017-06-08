@@ -9,7 +9,7 @@ package characters;
  *
  * @author Mohini
  */
-public class ADHD extends Characters{
+public class ADHD extends CharacterBasics{
 
     private String name = "ADHD";
     private String characterClass = null;
