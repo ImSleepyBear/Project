@@ -39,11 +39,11 @@ public class FXMLCardCollectionController implements Initializable {
     private MenuButton showCards;
 
     @FXML
-    private ListView<String> characterList = new ListView<String>();
+    private ListView<String> characterList;// = new ListView<String>();
 
 //    ObservableList<String> items = FXCollections.observableArrayList();
-    private ListProperty<String> listProperty = new SimpleListProperty<String>();
-    private List<String> items = new ArrayList<String>();
+//    private ListProperty<String> listProperty = new SimpleListProperty<String>();
+//    private List<String> items = new ArrayList<String>();
     
     private characters.CharacterInformation characterInfo = new CharacterInformation();
     ChangeScene cs = new ChangeScene();
@@ -51,19 +51,18 @@ public class FXMLCardCollectionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+//        try{
+        ObservableList<String> items = FXCollections.observableArrayList();
         for (String listItems : characterInfo.characters) {
             items.add(listItems);
             System.out.println(listItems);
         }
-
-        for (String item : items) {
-            System.out.println("item " + item);
-        }
-//        items.addAll(characterInfo.getCharacters());
-//        characterList.setItems(items);
-//        characterList.itemsProperty().bind(listProperty);
-//        items.set(FXCollections.observableArrayList(items));
-//        listProperty.set(FXCollections.observableArrayList(items));
+        
+        characterList.setItems(items);
+//        } catch (Exception e){
+//            System.out.println("exception in loading listitems");
+//            e.printStackTrace();
+//        }
     }
 
     @FXML
