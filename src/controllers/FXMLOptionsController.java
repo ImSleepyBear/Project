@@ -8,6 +8,7 @@ package controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import scenes.ChangeScene;
 
 /**
  * FXML Controller class
@@ -19,6 +20,9 @@ public class FXMLOptionsController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+    private ChangeScene cs = new ChangeScene();
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

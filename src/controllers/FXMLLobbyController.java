@@ -7,6 +7,8 @@ package controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -50,21 +52,22 @@ public class FXMLLobbyController implements Initializable {
     @FXML
     private ListView <String> friendList;
     
-    private ChangeScene cs = new ChangeScene();
+    private scenes.ChangeScene cs = new ChangeScene();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ObservableList<String> items = FXCollections.observableArrayList("show your added friends here", "connect this list to the database", "also show friend availability?");
+        friendList.setItems(items);
     }    
     
     @FXML
     public void singlePlayer(ActionEvent event){
-        cs.change(event, null);
+        cs.change(event, cs.playground);
     }
     
     @FXML
     public void multiPlayer(ActionEvent event){
-        cs.change(event, null);
+        cs.change(event, cs.playground);
     }
     
     @FXML
@@ -79,7 +82,7 @@ public class FXMLLobbyController implements Initializable {
     
     @FXML
     public void friends(ActionEvent event){
-        cs.change(event, null);
+        cs.change(event, cs.friends);
     }
     
     @FXML

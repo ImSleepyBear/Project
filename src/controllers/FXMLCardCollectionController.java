@@ -42,7 +42,7 @@ public class FXMLCardCollectionController implements Initializable {
     private ListView<String> characterList;
     
     private characters.CharacterInformation characterInfo = new CharacterInformation();
-    ChangeScene cs = new ChangeScene();
+    private ChangeScene cs = new ChangeScene();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -29,6 +29,8 @@ public class ChangeScene {
     public String collection = "CardCollection";
     public String options = "Options";
     public String instructions = "Instructions";
+    public String friends = "Friends";
+    public String playground = "Playground";
     
     public void change(ActionEvent event, String destination) {        
         try {
