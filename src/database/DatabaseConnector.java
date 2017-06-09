@@ -28,7 +28,15 @@ public class DatabaseConnector {
     
     PreparedStatement preparedStatement = null;
     
-    public void connect(){
+    public static void connect(){
         
+    }
+    
+    public static void close(){
+        
+    }
+    
+    public static Connection getConnection (){
+        return null;
     }
 }
