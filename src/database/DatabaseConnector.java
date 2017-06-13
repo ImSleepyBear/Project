@@ -12,7 +12,7 @@ import java.sql.ResultSet;
  */
 
 /*
- * connects to the database, and adds/changes/deletes variables.
+ * dis-/connects to the database, and checks if connected.
  * 
  */
 
