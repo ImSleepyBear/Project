@@ -1,7 +1,7 @@
 
 package controllers;
 
-import characters.CharacterInformation;
+import localstorage.CharacterInformation;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
+import localstorage.GeneralInformation;
 import scenes.ChangeScene;
 
 /**
@@ -37,24 +39,38 @@ public class FXMLCardCollectionController implements Initializable {
     @FXML
     private ListView<String> characterList;
     
-    private characters.CharacterInformation characterInfo = new CharacterInformation();
+    private CharacterInformation characterInfo = new CharacterInformation();
+    private GeneralInformation generalInfo = new GeneralInformation();
     private ChangeScene cs = new ChangeScene();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-//        try{
-        ObservableList<String> items = FXCollections.observableArrayList();
+        //population of the listview
+        ObservableList<String> deceases = FXCollections.observableArrayList();
         for (String listItems : characterInfo.characters) {
-            items.add(listItems);
+            deceases.add(listItems);
             System.out.println(listItems);
         }
+        characterList.setItems(deceases);
         
-        characterList.setItems(items);
-//        } catch (Exception e){
-//            System.out.println("exception in loading listitems");
-//            e.printStackTrace();
-//        }
+        //population of sort list menu button
+        sortCards.getItems().addAll(
+            FXCollections.observableArrayList(
+                new MenuItem(generalInfo.sortCards[0]), 
+                new MenuItem(generalInfo.sortCards[1]), 
+                new MenuItem(generalInfo.sortCards[2])
+            )
+        );
+        
+        //population of show cards menu button
+        showCards.getItems().addAll(
+            FXCollections.observableArrayList(
+                new MenuItem(generalInfo.showCards[0]), 
+                new MenuItem(generalInfo.showCards[1])
+            )
+        );
+        
     }
 
     @FXML
