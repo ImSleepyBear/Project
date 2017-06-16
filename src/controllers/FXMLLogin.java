@@ -7,7 +7,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import scenes.ChangeScene;
 
@@ -19,18 +18,11 @@ public class FXMLLogin implements Initializable {
     
     @FXML
     private TextField txtField_username;
+    
     @FXML
     private TextField txtField_password;
-    @FXML
-    private Button login;
-    @FXML
-    private Button exit;
-    @FXML
-    private Button sign_up;
-    @FXML
-    private Button recover_credentials;
     
-    private ChangeScene cs = new ChangeScene();
+    private final ChangeScene cs = new ChangeScene();
     
     @FXML
     private void login(ActionEvent event) {

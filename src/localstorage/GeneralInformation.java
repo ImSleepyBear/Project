@@ -22,6 +22,10 @@ public class GeneralInformation {
         "Collected cards", "All cards"
     };
     
+    public String[] showInstructions = {
+        "How to play", "How the cards work", "The layout of the cards"
+    };
+    
     public String[] getOptions() {
         return options;
     }

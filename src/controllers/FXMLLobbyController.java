@@ -8,7 +8,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import scenes.ChangeScene;
 
@@ -24,31 +23,11 @@ import scenes.ChangeScene;
 
 public class FXMLLobbyController implements Initializable {
     
-//    @FXML
-//    private Button singlePlayer;
-//    
-//    @FXML
-//    private Button multiPlayer;
-//    
-//    @FXML
-//    private Button cardCollection;
-//    
-//    @FXML
-//    private Button instructions;
-//    
-//    @FXML
-//    private Button friends;
-//    
-//    @FXML
-//    private Button options;
-//    
-//    @FXML
-//    private Button logout;
     
     @FXML
     private ListView <String> friendList;
     
-    private scenes.ChangeScene cs = new ChangeScene();
+    private final ChangeScene cs = new ChangeScene();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -85,7 +64,6 @@ public class FXMLLobbyController implements Initializable {
     public void options(ActionEvent event){
         cs.change(event, cs.options);
     }
-    
     
     @FXML
     public void logOut(ActionEvent event){

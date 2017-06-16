@@ -17,4 +17,12 @@ package friendManagement;
 
 public class FriendManagement {
     
+    void addFriends(){
+        
+    }
+    
+    void deleteFriends(){
+        
+    }
+    
 }
