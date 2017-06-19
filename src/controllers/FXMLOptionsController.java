@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import localstorage.ConfigFile;
 import scenes.ChangeScene;
 
 /**
@@ -18,7 +19,7 @@ public class FXMLOptionsController implements Initializable {
     
     private ChangeScene cs = new ChangeScene();
     // save windowed/fullscreen, as well as audio settings in the configfile
-//    private final ConfigFile config = new ConfigFile();
+    private final ConfigFile config = new ConfigFile();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
