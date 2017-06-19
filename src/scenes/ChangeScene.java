@@ -32,6 +32,7 @@ public class ChangeScene {
     public String friends = "Friends";
     public String playground = "Playground";
     
+    // change scene from buttons
     public void change(ActionEvent event, String destination) {        
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/scenes/FXML" + destination + ".fxml"));
@@ -45,17 +46,18 @@ public class ChangeScene {
         }
     }  
     
-//    public void change(ActionEvent event, String destination) {
-//
-//        try {
-//            Parent root = FXMLLoader.load(getClass().getResource("FXML" + destination + ".fxml"));
-//            Scene scene = new Scene(root);
-//            Stage appStage = (Stage) ((MenuButton) event.getSource()).getScene().getWindow();
-//            appStage.setScene(scene);
-//            appStage.show();
-//
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//        }
-//    }  
+    //change scene from menuitem
+    public void change(String destination) {
+
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXML" + destination + ".fxml"));
+            Scene scene = new Scene(root);
+            Stage appStage = (Stage) root.getScene().getWindow();
+            appStage.setScene(scene);
+            appStage.show();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }  
 }

@@ -15,7 +15,7 @@
                   <MenuButton fx:id="sortCards" mnemonicParsing="false" onAction="#sortCards" prefHeight="25.0" prefWidth="313.0" text="Sort Cards" />
                   <MenuButton fx:id="showCards" layoutX="324.0" mnemonicParsing="false" onAction="#showCards" prefHeight="25.0" prefWidth="313.0" text="Show Cards" />
                   <Button layoutX="717.0" layoutY="2.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="60.0" text="Back" />
-                  <Button fx:id="displayCards" layoutX="662.0" layoutY="2.0" mnemonicParsing="false" onAction="#displayCards" prefHeight="25.0" prefWidth="28.0" text="B" />
+                  <Button layoutX="662.0" layoutY="2.0" mnemonicParsing="false" onAction="#displayCards" prefHeight="25.0" prefWidth="28.0" text="B" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">

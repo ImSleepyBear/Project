@@ -16,10 +16,8 @@ import scenes.ChangeScene;
  */
 public class FXMLPlaygroundController implements Initializable {
 
-    @FXML
-    private Button back;
     
-    private ChangeScene cs = new ChangeScene();
+    private final ChangeScene cs = new ChangeScene();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

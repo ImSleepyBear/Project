@@ -3,11 +3,7 @@ package controllers;
 
 import localstorage.CharacterInformation;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
-import javafx.beans.property.ListProperty;
-import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -39,9 +35,9 @@ public class FXMLCardCollectionController implements Initializable {
     @FXML
     private ListView<String> characterList;
     
-    private CharacterInformation characterInfo = new CharacterInformation();
-    private GeneralInformation generalInfo = new GeneralInformation();
-    private ChangeScene cs = new ChangeScene();
+    private final CharacterInformation characterInfo = new CharacterInformation();
+    private final GeneralInformation generalInfo = new GeneralInformation();
+    private final ChangeScene cs = new ChangeScene();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

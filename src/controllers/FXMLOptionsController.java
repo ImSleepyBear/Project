@@ -15,9 +15,6 @@ import scenes.ChangeScene;
  * @author mohini
  */
 public class FXMLOptionsController implements Initializable {
-
-    @FXML
-    private Button back;
     
     private ChangeScene cs = new ChangeScene();
     // save windowed/fullscreen, as well as audio settings in the configfile
