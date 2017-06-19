@@ -20,6 +20,8 @@ public class FXMLOptionsController implements Initializable {
     private Button back;
     
     private ChangeScene cs = new ChangeScene();
+    // save windowed/fullscreen, as well as audio settings in the configfile
+//    private final ConfigFile config = new ConfigFile();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
