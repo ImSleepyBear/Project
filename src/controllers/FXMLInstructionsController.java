@@ -27,6 +27,13 @@ public class FXMLInstructionsController implements Initializable {
     private MenuButton showInstructions;
     
     @FXML
+    private MenuItem showInstructionsItem1;
+    @FXML
+    private MenuItem showInstructionsItem2;
+    @FXML
+    private MenuItem showInstructionsItem3;
+    
+    @FXML
     public void back(ActionEvent event) {
         cs.change(event, cs.lobby);
     }
@@ -35,9 +42,9 @@ public class FXMLInstructionsController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         showInstructions.getItems().addAll(
             FXCollections.observableArrayList(
-                new MenuItem(generalInfo.showInstructions[0]),
-                new MenuItem(generalInfo.showInstructions[1]),
-                new MenuItem(generalInfo.showInstructions[2])
+                showInstructionsItem1 = new MenuItem(generalInfo.getShowInstructions()[0]),
+                showInstructionsItem2 = new MenuItem(generalInfo.getShowInstructions()[1]),
+                showInstructionsItem3 = new MenuItem(generalInfo.getShowInstructions()[2])
             )
         );
     }    

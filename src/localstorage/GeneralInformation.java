@@ -11,7 +11,7 @@ package localstorage;
  */
 public class GeneralInformation {
 
-    public String[] options = {
+    private String[] options = {
         "Options", "Log Out", "Exit"
     };
 
@@ -19,15 +19,15 @@ public class GeneralInformation {
         "Resign", "Options", "Log Out", "Exit"
     };
 
-    public String[] sortCards = {
-        "By name", "By power", "By health"
+    private String[] sortCards = {
+        "By name", "By class", "By power", "By damage", "By manacost", "By rarity"
     };
 
-    public String[] showCards = {
-        "Collected cards", "All cards"
+    private String[] showCards = {
+        "All cards", "Collected cards", "Psycologigal", "Physical", "Medpacks"
     };
     
-    public String[] showInstructions = {
+    private String[] showInstructions = {
         "How to play", "How the cards work", "The layout of the cards"
     };
     
@@ -45,5 +45,9 @@ public class GeneralInformation {
 
     public String[] getShowCards() {
         return showCards;
+    }
+
+    public String[] getShowInstructions() {
+        return showInstructions;
     }
 }

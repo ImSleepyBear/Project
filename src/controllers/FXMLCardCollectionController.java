@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.input.MouseEvent;
 import localstorage.GeneralInformation;
 import scenes.ChangeScene;
 
@@ -39,83 +40,89 @@ public class FXMLCardCollectionController implements Initializable {
     private ListView<String> characterList;
     
     @FXML
-    private MenuItem sortCards1;
+    private MenuItem sortCardsItem1;
     @FXML
-    private MenuItem sortCards2;
+    private MenuItem sortCardsItem2;
     @FXML
-    private MenuItem sortCards3;
+    private MenuItem sortCardsItem3;
     @FXML
-    private MenuItem showCards1;
+    private MenuItem sortCardsItem4;
     @FXML
-    private MenuItem showCards2;
+    private MenuItem sortCardsItem5;
+    @FXML
+    private MenuItem sortCardsItem6;
+    
+    @FXML
+    private MenuItem showCardsItem1;
+    @FXML
+    private MenuItem showCardsItem2;
+    @FXML
+    private MenuItem showCardsItem3;
+    @FXML
+    private MenuItem showCardsItem4;
+    @FXML
+    private MenuItem showCardsItem5;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
         //population of the listview
         ObservableList<String> deceases = FXCollections.observableArrayList();
-        for (String listItems : characterInfo.characters) {
+        for (String listItems : characterInfo.getCharacters()) {
             deceases.add(listItems);
             System.out.println(listItems);
         }
         characterList.setItems(deceases);
         
+        //if one of the items is clicked by the mouse in the list of deceases, 
+        //a new view with the specific decease will show up
+        //*somehow send an extra value or something similar when an item in the list is clicked*
+        characterList.setOnMouseClicked((MouseEvent event) -> {
+            System.out.println("Chosen decease: " + characterList.getSelectionModel().getSelectedItem());
+            cs.change(event, cs.exploreCard);
+        });
+        
         //population of sort list menu button
         sortCards.getItems().addAll(
             FXCollections.observableArrayList(
-                sortCards1 = new MenuItem(generalInfo.sortCards[0]),
-                sortCards2 = new MenuItem(generalInfo.sortCards[1]),
-                sortCards3 = new MenuItem(generalInfo.sortCards[2])
+                sortCardsItem1 = new MenuItem(generalInfo.getSortCards()[0]),
+                sortCardsItem2 = new MenuItem(generalInfo.getSortCards()[1]),
+                sortCardsItem3 = new MenuItem(generalInfo.getSortCards()[2]),
+                sortCardsItem4 = new MenuItem(generalInfo.getSortCards()[3]),
+                sortCardsItem5 = new MenuItem(generalInfo.getSortCards()[4]),
+                sortCardsItem6 = new MenuItem(generalInfo.getSortCards()[5])
             )
         );
         
         //sort by name
-        sortCards1.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                
-            }
-        });
-        
-        //sort by power
-        sortCards2.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                
-            }
-        });
-        
-        //sort by health
-        sortCards3.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                
-            }
-        });
+        //duplicate for each sortCards item
+//        sortCards1.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent event) {
+////                cs.change(event, cs.friends);
+//            }
+//        });
 
         //population of show cards menu button
         showCards.getItems().addAll(
             FXCollections.observableArrayList(
-                showCards1 = new MenuItem(generalInfo.showCards[0]), 
-                showCards2 = new MenuItem(generalInfo.showCards[1])
+                showCardsItem1 = new MenuItem(generalInfo.getShowCards()[0]), 
+                showCardsItem2 = new MenuItem(generalInfo.getShowCards()[1]), 
+                showCardsItem3 = new MenuItem(generalInfo.getShowCards()[2]), 
+                showCardsItem4 = new MenuItem(generalInfo.getShowCards()[3]), 
+                showCardsItem5 = new MenuItem(generalInfo.getShowCards()[4])
             )
         );
         
         //show collected cards
-        showCards1.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                
-            }
-        });
+        //duplicate for each showCards item
+//        showCards1.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent event) {
+//                
+//            }
+//        });
         
-        //show sorted cards
-        showCards2.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                
-            }
-        });
     }
 
     @FXML

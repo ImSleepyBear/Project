@@ -47,7 +47,7 @@ public class FXMLLobbyController implements Initializable {
     
     @FXML
     public void cardCollection(ActionEvent event){
-        cs.change(event, cs.collection);
+        cs.change(event, cs.cardCollection);
     }
     
     @FXML
