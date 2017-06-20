@@ -95,11 +95,12 @@ public class FXMLCardCollectionController implements Initializable {
         );
         
         //sort by name
-        //duplicate for each sortCards item
-//        sortCards1.setOnAction(new EventHandler<ActionEvent>() {
+        //duplicate for each sortCards item, and use the menubutton where the item is used
+//        sortCardsItem1.setOnAction(new EventHandler<ActionEvent>() {
 //            @Override
 //            public void handle(ActionEvent event) {
-////                cs.change(event, cs.friends);
+//                System.out.println("sortcardsitem1 has fired");
+//                cs.change(sortCards, cs.friends);
 //            }
 //        });
 
@@ -115,7 +116,7 @@ public class FXMLCardCollectionController implements Initializable {
         );
         
         //show collected cards
-        //duplicate for each showCards item
+        //duplicate for each showCards item, and use the menubutton where the item is used
 //        showCards1.setOnAction(new EventHandler<ActionEvent>() {
 //            @Override
 //            public void handle(ActionEvent event) {

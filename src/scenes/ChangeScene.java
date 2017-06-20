@@ -64,14 +64,13 @@ public class ChangeScene {
     }  
     
     
-    //change scene from menuitem
-    //not possible to use at the moment since the menuitem uses actionevents, while not being part of the node class
-    public void change(MenuItem item, String destination) {
+    //change scene from menuitem, or at least the menubutton where the item is used
+    public void change(MenuButton menuBtn, String destination) {
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("FXML" + destination + ".fxml"));
             Scene scene = new Scene(root);
-            Stage appStage = (Stage) root.getScene().getWindow();
+            Stage appStage = (Stage) menuBtn.getScene().getWindow();
             appStage.setScene(scene);
             appStage.show();
 
