@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -22,22 +23,31 @@ import scenes.ChangeScene;
  * @author mohini
  */
 public class FXMLCardCollectionController implements Initializable {
-
+    
+    private final CharacterInformation characterInfo = new CharacterInformation();
+    private final GeneralInformation generalInfo = new GeneralInformation();
+    private final ChangeScene cs = new ChangeScene();
+    
     @FXML
     private Button displayCards;
-
     @FXML
     private MenuButton sortCards;
-
     @FXML
     private MenuButton showCards;
 
     @FXML
     private ListView<String> characterList;
     
-    private final CharacterInformation characterInfo = new CharacterInformation();
-    private final GeneralInformation generalInfo = new GeneralInformation();
-    private final ChangeScene cs = new ChangeScene();
+    @FXML
+    private MenuItem sortCards1;
+    @FXML
+    private MenuItem sortCards2;
+    @FXML
+    private MenuItem sortCards3;
+    @FXML
+    private MenuItem showCards1;
+    @FXML
+    private MenuItem showCards2;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -53,20 +63,59 @@ public class FXMLCardCollectionController implements Initializable {
         //population of sort list menu button
         sortCards.getItems().addAll(
             FXCollections.observableArrayList(
-                new MenuItem(generalInfo.sortCards[0]), 
-                new MenuItem(generalInfo.sortCards[1]), 
-                new MenuItem(generalInfo.sortCards[2])
+                sortCards1 = new MenuItem(generalInfo.sortCards[0]),
+                sortCards2 = new MenuItem(generalInfo.sortCards[1]),
+                sortCards3 = new MenuItem(generalInfo.sortCards[2])
             )
         );
         
+        //sort by name
+        sortCards1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+            }
+        });
+        
+        //sort by power
+        sortCards2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+            }
+        });
+        
+        //sort by health
+        sortCards3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+            }
+        });
+
         //population of show cards menu button
         showCards.getItems().addAll(
             FXCollections.observableArrayList(
-                new MenuItem(generalInfo.showCards[0]), 
-                new MenuItem(generalInfo.showCards[1])
+                showCards1 = new MenuItem(generalInfo.showCards[0]), 
+                showCards2 = new MenuItem(generalInfo.showCards[1])
             )
         );
         
+        //show collected cards
+        showCards1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+            }
+        });
+        
+        //show sorted cards
+        showCards2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+            }
+        });
     }
 
     @FXML

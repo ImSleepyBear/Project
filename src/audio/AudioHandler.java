@@ -16,6 +16,9 @@ import javafx.scene.media.MediaPlayer;
 /*
  * add, start and stop audio files
  * make use of both background audio, and audio effects
+ * 
+ * also make sure to only play the audio if the configurations in the config file
+ * allows it, otherwise keep the audio muted
  */
 
 public class AudioHandler {
@@ -27,7 +30,7 @@ public class AudioHandler {
     private Media soundEffectFile;
     
     public void playBackgroundAudio (){
-        backgroundAudioFile = new Media(null);
+        backgroundAudioFile = new Media(null); //add directory to the file
         backgroundAudio = new MediaPlayer(backgroundAudioFile);
         backgroundAudio.setCycleCount(MediaPlayer.INDEFINITE);
         backgroundAudio.setVolume(0.5);
@@ -35,7 +38,7 @@ public class AudioHandler {
     }
     
     public void playSoundEffect (){
-        soundEffectFile = new Media(null);
+        soundEffectFile = new Media(null); //add directory to the file
         soundEffectAudio = new MediaPlayer(soundEffectFile);
         soundEffectAudio.setVolume(1.5);
         soundEffectAudio.setAutoPlay(true);

@@ -16,7 +16,7 @@ import java.io.File;
 
 public class ConfigFile {
     
-    // what preferences to save, regards sound
+    // what preferences to save, regards sound and fullscreen/windowed
     
     private final File configFile = new File("Config.cfg"); //direction
     private final int configSize = 8;
