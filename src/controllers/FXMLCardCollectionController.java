@@ -1,6 +1,7 @@
 
 package controllers;
 
+import characters.LoadCharacter;
 import localstorage.CharacterInformation;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,6 +28,7 @@ public class FXMLCardCollectionController implements Initializable {
     
     private final CharacterInformation characterInfo = new CharacterInformation();
     private final GeneralInformation generalInfo = new GeneralInformation();
+    private final LoadCharacter loadCharacter = new LoadCharacter();
     private final ChangeScene cs = new ChangeScene();
     
     @FXML
@@ -68,7 +70,7 @@ public class FXMLCardCollectionController implements Initializable {
 
         //population of the listview
         ObservableList<String> deceases = FXCollections.observableArrayList();
-        for (String listItems : characterInfo.getCharacters()) {
+        for (String listItems : characterInfo.getCharacterNames()) {
             deceases.add(listItems);
             System.out.println(listItems);
         }
@@ -76,69 +78,97 @@ public class FXMLCardCollectionController implements Initializable {
         
         //if one of the items is clicked by the mouse in the list of deceases, 
         //a new view with the specific decease will show up
-        //*somehow send an extra value or something similar when an item in the list is clicked*
         characterList.setOnMouseClicked((MouseEvent event) -> {
             System.out.println("Chosen decease: " + characterList.getSelectionModel().getSelectedItem());
+            loadCharacter.setCharacterToShow(characterList.getSelectionModel().getSelectedItem());
             cs.change(event, cs.exploreCard);
         });
         
         //population of sort list menu button
         sortCards.getItems().addAll(
-            FXCollections.observableArrayList(
-                sortCardsItem1 = new MenuItem(generalInfo.getSortCards()[0]),
-                sortCardsItem2 = new MenuItem(generalInfo.getSortCards()[1]),
-                sortCardsItem3 = new MenuItem(generalInfo.getSortCards()[2]),
-                sortCardsItem4 = new MenuItem(generalInfo.getSortCards()[3]),
-                sortCardsItem5 = new MenuItem(generalInfo.getSortCards()[4]),
-                sortCardsItem6 = new MenuItem(generalInfo.getSortCards()[5])
-            )
+                FXCollections.observableArrayList(
+                    sortCardsItem1 = new MenuItem(generalInfo.getSortCards()[0]),
+                    sortCardsItem2 = new MenuItem(generalInfo.getSortCards()[1]),
+                    sortCardsItem3 = new MenuItem(generalInfo.getSortCards()[2]),
+                    sortCardsItem4 = new MenuItem(generalInfo.getSortCards()[3]),
+                    sortCardsItem5 = new MenuItem(generalInfo.getSortCards()[4]),
+                    sortCardsItem6 = new MenuItem(generalInfo.getSortCards()[5])
+                )
         );
         
         //sort by name
         //duplicate for each sortCards item, and use the menubutton where the item is used
-//        sortCardsItem1.setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent event) {
-//                System.out.println("sortcardsitem1 has fired");
-//                cs.change(sortCards, cs.friends);
-//            }
-//        });
+        sortCardsItem1.setOnAction((ActionEvent event) -> {
+            System.out.println("sortcardsitem1 has fired");
+            sortCards.setText("Sorted: " + generalInfo.getSortCards()[0]);
+        });
+        
+        sortCardsItem2.setOnAction((ActionEvent event) -> {
+            System.out.println("sortcardsitem2 has fired");
+            sortCards.setText("Sorted: " + generalInfo.getSortCards()[1]);
+        });
+        
+        sortCardsItem3.setOnAction((ActionEvent event) -> {
+            System.out.println("sortcardsitem3 has fired");
+            sortCards.setText("Sorted: " + generalInfo.getSortCards()[2]);
+        });
+        
+        sortCardsItem4.setOnAction((ActionEvent event) -> {
+            System.out.println("sortcardsitem4 has fired");
+            sortCards.setText("Sorted: " + generalInfo.getSortCards()[3]);
+        });
+        
+        sortCardsItem5.setOnAction((ActionEvent event) -> {
+            System.out.println("sortcardsitem5 has fired");
+            sortCards.setText("Sorted: " + generalInfo.getSortCards()[4]);
+        });
+        
+        sortCardsItem6.setOnAction((ActionEvent event) -> {
+            System.out.println("sortcardsitem6 has fired");
+            sortCards.setText("Sorted: " + generalInfo.getSortCards()[5]);
+        });
 
         //population of show cards menu button
         showCards.getItems().addAll(
-            FXCollections.observableArrayList(
-                showCardsItem1 = new MenuItem(generalInfo.getShowCards()[0]), 
-                showCardsItem2 = new MenuItem(generalInfo.getShowCards()[1]), 
-                showCardsItem3 = new MenuItem(generalInfo.getShowCards()[2]), 
-                showCardsItem4 = new MenuItem(generalInfo.getShowCards()[3]), 
-                showCardsItem5 = new MenuItem(generalInfo.getShowCards()[4])
-            )
+                FXCollections.observableArrayList(
+                    showCardsItem1 = new MenuItem(generalInfo.getShowCards()[0]), 
+                    showCardsItem2 = new MenuItem(generalInfo.getShowCards()[1]), 
+                    showCardsItem3 = new MenuItem(generalInfo.getShowCards()[2]), 
+                    showCardsItem4 = new MenuItem(generalInfo.getShowCards()[3]), 
+                    showCardsItem5 = new MenuItem(generalInfo.getShowCards()[4])
+                )
         );
         
-        //show collected cards
-        //duplicate for each showCards item, and use the menubutton where the item is used
-//        showCards1.setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent event) {
-//                
-//            }
-//        });
+        showCardsItem1.setOnAction((ActionEvent event) -> {
+            System.out.println("showcardsitem1 has fired");
+            showCards.setText("Showed: " + generalInfo.getShowCards()[0]);
+        });
         
-    }
-
-    @FXML
-    public void sortCards(ActionEvent event) {
-//        cs.change(event, cs.lobby);
-    }
-
-    @FXML
-    public void showCards(ActionEvent event) {
-//        cs.change(event, cs.lobby);
+        showCardsItem2.setOnAction((ActionEvent event) -> {
+            System.out.println("showcardsitem2 has fired");
+            showCards.setText("Showed: " + generalInfo.getShowCards()[1]);
+        });
+        
+        showCardsItem3.setOnAction((ActionEvent event) -> {
+            System.out.println("showcardsitem3 has fired");
+            showCards.setText("Showed: " + generalInfo.getShowCards()[2]);
+        });
+        
+        showCardsItem4.setOnAction((ActionEvent event) -> {
+            System.out.println("showcardsitem4 has fired");
+            showCards.setText("Showed: " + generalInfo.getShowCards()[3]);
+        });
+        
+        showCardsItem5.setOnAction((ActionEvent event) -> {
+            System.out.println("showcardsitem5 has fired");
+            showCards.setText("Showed: " + generalInfo.getShowCards()[4]);
+        });
+        
     }
 
     @FXML
     public void displayCards(ActionEvent event) {
-//        cs.change(event, cs.lobby);
+        System.out.println("currently unused");
     }
 
     @FXML

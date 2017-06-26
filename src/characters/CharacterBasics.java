@@ -19,6 +19,7 @@ public abstract class CharacterBasics {
     public abstract int manaCost();
     public abstract int health();
     public abstract int power();
+    public abstract String information();
 //    public abstract void ability();
 
 }

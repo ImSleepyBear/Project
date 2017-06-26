@@ -1,8 +1,14 @@
 
 package controllers;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -37,11 +43,29 @@ public class FXMLLogin implements Initializable {
     @FXML
     private void signUp(ActionEvent event) {
         cs.change(event, cs.signup);
+        
+        //use this code if there's a wepage for signing up available
+//        try {
+//            Desktop.getDesktop().browse(new URI(null));
+//        } catch (IOException ex) {
+//            Logger.getLogger(FXMLLogin.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (URISyntaxException ex) {
+//            Logger.getLogger(FXMLLogin.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
     
     @FXML
     private void recoverCredentials(ActionEvent event) {
         cs.change(event, cs.recover);
+        
+        //use this code if there's a webpage for recovering credentials available
+//        try {
+//            Desktop.getDesktop().browse(new URI(null));
+//        } catch (IOException ex) {
+//            Logger.getLogger(FXMLLogin.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (URISyntaxException ex) {
+//            Logger.getLogger(FXMLLogin.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
     
     @Override

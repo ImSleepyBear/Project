@@ -10,8 +10,8 @@ package localstorage;
  * @author Mohini
  */
 public class CharacterInformation {
-    private String[] characters = {
-        "ADHD", "ADD", "African Trypanomiasis or Sleeping Sickness", "ALS or Lou Gehrig's disease", "Alsheimers",
+    private String[] charactersNames = {
+        "ADD", "ADHD", "African Trypanomiasis or Sleeping Sickness", "ALS or Lou Gehrig's disease", "Alsheimers",
         "American Trypanosomiasis", "Anorexia", "Asperger syndrome", "Asthma", "Autism", "Avian influenza or Bird Flu",
         "Bipolar", "Bubonic plague", "Cancer", "Cholera", "Chronic Obstructibe Pulmonary Disease or COPD", "Cold",
         "Coronary Artery Desease or Ischemic Heart Disease", "Cryptosporidiosis", "Damp", "Dengue Fever", "Depression",
@@ -22,7 +22,7 @@ public class CharacterInformation {
     /**
      * @return the characters
      */
-    public String[] getCharacters() {
-        return characters;
+    public String[] getCharacterNames() {
+        return charactersNames;
     }
 }

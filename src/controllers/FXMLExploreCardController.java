@@ -1,6 +1,7 @@
 
 package controllers;
 
+import characters.LoadCharacter;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -20,19 +21,13 @@ public class FXMLExploreCardController implements Initializable {
     private final ChangeScene cs = new ChangeScene();
     private final CharacterInformation characterInfo = new CharacterInformation();
     private final GeneralInformation generalInfo = new GeneralInformation();
+    private final LoadCharacter loadCharacter = new LoadCharacter();
     
-    public String chosenCharacter;
-    
-    private String characterName;
-    private String characterClass;
-    private String characterRarity;
-    private int characterManaCost;
-    private String characterAbilities;
-    private String characterDescritption;
+//    public String chosenCharacter;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+//        loadCharacter.getCharacterInfo(chosenCharacter);
     }    
     
     @FXML

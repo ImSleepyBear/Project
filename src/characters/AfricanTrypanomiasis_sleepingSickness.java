@@ -19,7 +19,8 @@ public class AfricanTrypanomiasis_sleepingSickness extends CharacterBasics{
     private int manaCost = 0;
     private int health = 0;
     private int power = 0;
-
+    private String info = null;
+    
     @Override
     public String name() {
         return name;
@@ -58,6 +59,11 @@ public class AfricanTrypanomiasis_sleepingSickness extends CharacterBasics{
     @Override
     public int power() {
         return power;
+    }
+
+    @Override
+    public String information() {
+        return info;
     }
     
 }

@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package localstorage;
 
 /**
  *
  * @author Mohini
  */
+
+/*
+this class holds string arrays with information that is used for, and fetched from
+different menubuttons, which are located in various scenes and controllers
+*/
 public class GeneralInformation {
 
     private String[] options = {
