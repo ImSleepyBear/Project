@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gameplay;
+package localstorage;
 
 /**
  *
  * @author mohini
  */
-public class Player {
+public class PlayerInfo {
     
     private int experience = 0;
     private int experienceUntilNewLevel = 0;

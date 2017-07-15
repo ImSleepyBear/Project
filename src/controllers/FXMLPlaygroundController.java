@@ -24,6 +24,8 @@ public class FXMLPlaygroundController implements Initializable {
     private final ChangeScene cs = new ChangeScene();
     private final GeneralInformation generalInfo = new GeneralInformation();
     
+    private boolean playerTurn; //decides who's starting
+    
     @FXML
     private MenuButton gameplayOptions;
     
