@@ -6,8 +6,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 import localstorage.ConfigFile;
 import scenes.ChangeScene;
 
@@ -21,6 +21,9 @@ public class FXMLOptionsController implements Initializable {
     private ChangeScene cs = new ChangeScene();
     // save windowed/fullscreen, as well as audio settings in the configfile
     private final ConfigFile config = new ConfigFile();
+    
+    @FXML
+    private TextField nickname;
     
     @FXML
     private CheckBox soundOnOff;
